@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header>
+      
+      <% if (task == null) { %>
+      <form action="/create" method="post">
+        <input type="text" name="task" id="task" placeholder="Add Task" />
+        <button id="addButton" type="submit">Add Task</button>
+      </form>
+      <% } else {%>
+      <form action="/updateOne/<%= task._id %>" method="post">
+        <input type="text" name="task" id="task" value="<%= task.task %>"/>
+        <button id="addButton" type="submit">Atualizar</button>
+      </form>
+      <% } %>
+    </header>
+
+    <section id="tasks">
+      <ul>
+        <% tasksList.forEach((task)=>{ %>
+          <li>
+            <%= task.task %> | <%= task.date.toLocaleDateString("pt-Br")%>
+            <a href="/getById/<%= task._id %>">Editar</a>
+            <a href="">Apagar</a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
