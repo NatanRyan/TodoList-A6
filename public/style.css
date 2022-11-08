@@ -42,7 +42,178 @@ button {
     transition: all 0.3s ease-in-out;
 }
 
-button:hover{
+button:hover {
     background-color: #fff;
     color: black;
+}
+
+section#tasks {
+    margin: .5rem;
+
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding: .5rem;
+    background-color: rgb(22, 22, 24);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;   
+}
+
+ul li a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.5rem;
+}
+
+ul li span {
+    color: #ccc;
+    font-style: italic;
+    font-size: .8rem;
+    padding-left: 1rem;
+}
+
+ul li div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul li:nth-child(odd) {
+    background-color: rgb(5, 5, 5);
+}
+
+ul li:hover {
+    background-color: #5a5a5a;
+}
+
+a.btnUp {
+    padding: .5rem .8rem;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.3s ease-in-out;      ;
+}
+
+a.btnUp:hover {
+    background-color: #fff;
+    color: black;
+}
+
+a.btnDe {
+    padding: .5rem .8rem;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+a.btnDe:hover {
+    background-color: #fff;
+    color: black;
+}
+
+section#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+div#card {
+    width: 30rem;
+    position: relative;
+    background-color: #202024;
+}
+
+div#card h2{
+    padding: 2rem;
+    margin: 0;
+
+}
+
+div#card a#fechar {
+    position: absolute;
+    right: 0;
+    top: .7;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.7rem 2rem;
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+div#card a#fechar:hover {
+    background-color: rgb(151, 13, 13);
+}
+
+div#card hr{
+    width: 100%;
+    margin: 0 auto;
+}
+
+div#card p{
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+div#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+
+div#btn a{
+    text-decoration: none;
+    padding: 0.9rem;
+    width: 7rem;
+    text-align: center;
+    background-color: #202024;
+}
+
+
+div#btn a#btnNo{
+    color: rgb(151, 13, 13);
+    border: solid 1px;
+    margin-right: 1rem;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+}
+
+div#btn a#btnNo:hover{
+    background-color: rgb(151, 13, 13);
+    color: #fff;
+    border-color: rgb(151, 13, 13);
+}
+
+div#btn a#btnYes{
+    color: rgb(0, 164, 3);
+    border: solid 1px;
+    margin-right: 1rem;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+}
+
+div#btn a#btnYes:hover{
+    background-color: rgb(0, 164, 3);
+    color: #fff;
+    border-color: rgb(0, 164, 3);
 }
